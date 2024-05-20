@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "echo 'No build step'"
   },
   "dependencies": {
     "sneaks-api": "^1.2.3"
