@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Prices</title>
+</head>
+<body>
+  <h1>Product Prices</h1>
+  <p id="errorMessage" style="color: red;"></p>
+  <script>
+    // Get the product ID from Local Storage
+    const productId = localStorage.getItem('productId');
+    
+    // Check if productId is provided
+    if (!productId) {
+      document.getElementById('errorMessage').textContent = 'Error: Product ID is required.';
+    } else {
+      fetch(`/.netlify/functions/server/${productId}`)
+        .then(response => response.json())
+        .then(data => {
+          // Get the elements where you want to display the prices
+          const stockXPriceElement = document.getElementById('stockXPrice');
+          const goatPriceElement = document.getElementById('goatPrice');
+          const flightClubPriceElement = document.getElementById('flightClubPrice');
+    
+          // Update the elements with the prices
+          stockXPriceElement.textContent = `StockX Price: ${data.stockXPrice}`;
+          goatPriceElement.textContent = `Goat Price: ${data.goatPrice}`;
+          flightClubPriceElement.textContent = `Flight Club Price: ${data.flightClubPrice}`;
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          document.getElementById('errorMessage').textContent = `Error: ${error.message}`;
+        });
+    }
+    </script>
