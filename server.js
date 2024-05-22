@@ -32,7 +32,7 @@ app.get("/product/:productId", (req, res) => {
           </head>
           <body>
             <h1>Product Prices</h1>
-            <img src="/Images/sneakers/jordan1chicago.jpg">
+            
             <p>StockX Price: ${stockXPrice}+</p>
             <p>Goat Price: ${goatPrice}+</p>
             <p>Flight Club Price: ${flightClubPrice}+</p>
