@@ -38,30 +38,26 @@ app.get("/product/:productId", (req, res) => {
                 <h1 class="sub-title">Retro Jordans</h1>
                 <div class="work-list">
                     <div class="work">
-                        <img src="Images/sneakers/Jordan1Bred.jpg">
+                        <img src="public/Images/stockx.jpg">
                         <div class="layer">
                             <h3>StoxkX Price:</h3>
                             <p>StockX Price: ${stockXPrice}+</p>
-                                 
+                            <a href="/product/555088-007" class="sneaker-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
                     </div>
                     <div class="work">
-                        <img src="Images/sneakers/Jordan1Royal.jpg">
+                        <img src="public/Images/goat.jpg">
                         <div class="layer">
-                            <h3>Jordan 1 "Royal"</h3>
-                            <p>The Air Jordan 1 "Royal" is another iconic colorway of the Air Jordan 1 silhouette.
-                                 It features a black and royal blue color scheme, first released in 1985 alongside the "Bred" colorway.
-                                  Like the "Bred," the "Royal" is highly sought after by sneaker collectors and fans of the Air Jordan line.</p>
+                            <h3>Goat Price: </h3>
+                            <p>Goat Price: ${goatPrice}+</p>
                                   <a href="/product/555088-007" class="sneaker-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
                     </div>
                     <div class="work">
                         <img src="Images/sneakers/jordan1chicago.jpg">
                         <div class="layer">
-                            <h3>Jordan 1 "Chicago" </h3>
-                            <p>The Air Jordan 1 "Chicago" is one of the most iconic and sought-after colorways of the Air Jordan 1 silhouette. 
-                                It features a classic white, black, and red color scheme, paying homage to the Chicago Bulls, Michael Jordan's team.
-                                 The "Chicago" colorway was first released in 1985 and has been re-released several times due to its popularity among sneaker enthusiasts.</p>
+                            <h3>Flight Club Price: </h3>
+                            <p>Flight Club Price: ${flightClubPrice}+</p>
        <a href="/product/854262-001" class="sneaker-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
     
     
