@@ -27,7 +27,7 @@ app.get("/product/:productId", (req, res) => {
       res.send(`
         <html>
           <head>
-            <title>Product Prices</title>
+           
             <link rel="stylesheet" href="/Style.css">
           </head>
           <body>
@@ -35,7 +35,7 @@ app.get("/product/:productId", (req, res) => {
             
             <div id="projects">
             <div class="container">
-                <h1 class="sub-title">Retro Jordans</h1>
+                <h1 class="sub-title">Product Prices</h1>
                 <div class="work-list">
                     <div class="work">
                         <img src="/Images/stockx.jpg">
@@ -62,7 +62,7 @@ app.get("/product/:productId", (req, res) => {
                         </div>
                     </div>
                 </div>
-               
+                <a href="/" class="btn" id="toggleButton">Home</a>
             </div>
         </div>
 
