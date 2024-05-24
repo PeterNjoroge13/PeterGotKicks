@@ -6,6 +6,8 @@ Explore my database PeterGotKicks featuring iconic sneakers like the Jordan 1, 3
 Visit at:
 [PeterKGotKicks.com](https://www.peterkgotkicks.com)
 
+[![Watch the video](https://img.youtube.com/vi/x5OWuHa9CeQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=x5OWuHa9CeQ)
+
 Developed a dynamic sneaker database website, resulting in a user-friendly platform that allows visitors to view detailed information about various sneaker models, by leveraging Express.js and Node.js for server-side routing and handling HTTP requests and HTML/CSS and JavaScript for the User Interface.
 
 Implemented a product pricing feature using the  RestAPI's, which increased the website's functionality by providing real-time price comparisons from different Resell Marketplaces including StockX, Goat, and FlightClub, enhancing the user's decision-making process, saving over $100 per model.
