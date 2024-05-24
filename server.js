@@ -54,7 +54,7 @@ app.get("/product/:productId", (req, res) => {
                         </div>
                     </div>
                     <div class="work">
-                        <img src="Images/flightclub.jpg">
+                        <img src="/Images/flightclub.jpg">
                         <div class="layer">
                             <h3>Flight Club Price: </h3>
                             <p>Flight Club Price: ${flightClubPrice}+</p>
@@ -62,7 +62,7 @@ app.get("/product/:productId", (req, res) => {
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn" onclick="toggleContent(event)" id="toggleButton">See More</a>      
+               
             </div>
         </div>
 
