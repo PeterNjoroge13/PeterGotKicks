@@ -31,7 +31,7 @@ app.get("/product/:productId", (req, res) => {
             <link rel="stylesheet" href="/Style.css">
           </head>
           <body>
-            <h1>Product Prices</h1>
+        
             
             <div id="projects">
             <div class="container">
