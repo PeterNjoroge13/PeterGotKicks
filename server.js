@@ -38,29 +38,27 @@ app.get("/product/:productId", (req, res) => {
                 <h1 class="sub-title">Retro Jordans</h1>
                 <div class="work-list">
                     <div class="work">
-                        <img src="public/Images/stockx.jpg">
+                        <img src="/Images/stockx.jpg">
                         <div class="layer">
                             <h3>StoxkX Price:</h3>
                             <p>StockX Price: ${stockXPrice}+</p>
-                            <a href="/product/555088-007" class="sneaker-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://stockx.com/" class="sneaker-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
                     </div>
                     <div class="work">
-                        <img src="public/Images/goat.jpg">
+                        <img src="/Images/goat.jpg">
                         <div class="layer">
                             <h3>Goat Price: </h3>
                             <p>Goat Price: ${goatPrice}+</p>
-                                  <a href="/product/555088-007" class="sneaker-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                  <a href="https://www.goat.com/" class="sneaker-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
                     </div>
                     <div class="work">
-                        <img src="Images/sneakers/jordan1chicago.jpg">
+                        <img src="Images/flightclub.jpg">
                         <div class="layer">
                             <h3>Flight Club Price: </h3>
                             <p>Flight Club Price: ${flightClubPrice}+</p>
-       <a href="/product/854262-001" class="sneaker-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-    
-    
+       <a href="https://www.flightclub.com/" class="sneaker-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                         </div>
                     </div>
                 </div>
