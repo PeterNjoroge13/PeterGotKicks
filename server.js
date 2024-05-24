@@ -28,7 +28,7 @@ app.get("/product/:productId", (req, res) => {
         <html>
           <head>
             <title>Product Prices</title>
-            <link rel="stylesheet" href="/style.css">
+            <link rel="stylesheet" href="/Style.css">
           </head>
           <body>
             <h1>Product Prices</h1>
@@ -72,9 +72,7 @@ app.get("/product/:productId", (req, res) => {
 
 
 
-            <p>StockX Price: ${stockXPrice}+</p>
-            <p>Goat Price: ${goatPrice}+</p>
-            <p>Flight Club Price: ${flightClubPrice}+</p>
+           
           </body>
         </html>
       `);

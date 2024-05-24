@@ -18,18 +18,19 @@ body {
 
 .container {
     margin: 0 auto;
-    padding: 0 ;
+    padding: 0;
     margin-bottom: 0px;
     position: relative; 
 }
 
-.logo {
+nav img {
     width: 235px;
     height: 220px;
     display: block;
-    margin-top: 50px; 
-    margin-left: auto; 
-    margin-right: 235px;
+    position: relative;
+    top: 50%;
+    left: 48%;
+    transform: translate(-45%, 15%);
     z-index: -1;
 }
 
@@ -38,14 +39,14 @@ nav {
     align-items: center;
     justify-content: space-between;
     position: absolute;
-   
     top: 0;
     left: 0;
     right: 0;
 }
 #sidemenu{
-    margin-top: -100px;
+    margin-top: -42px;
     margin-right: 90px;
+
 }
 
 nav ul li{
