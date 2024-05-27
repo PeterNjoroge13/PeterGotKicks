@@ -3,8 +3,12 @@ BETA Version
 
 Explore my database PeterGotKicks featuring iconic sneakers like the Jordan 1, 3, and more. Get an in-depth look at sneaker's history, design, and where to buy them from top resell marketplaces such as StockX, and Goat. Whether you're a seasoned collector or a sneaker enthusiast, PeterGotKicks is your ultimate destination for all things Jordan.
 
-Visit at:
+Visit site at:
 [PeterKGotKicks.com](https://www.peterkgotkicks.com)
+
+Video Preview:
+
+[![Watch the video](https://img.youtube.com/vi/x5OWuHa9CeQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=x5OWuHa9CeQ)
 
 Developed a dynamic sneaker database website, resulting in a user-friendly platform that allows visitors to view detailed information about various sneaker models, by leveraging Express.js and Node.js for server-side routing and handling HTTP requests and HTML/CSS and JavaScript for the User Interface.
 
