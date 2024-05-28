@@ -419,9 +419,7 @@ margin-bottom: 0;
     .container {
         padding: 0px;
     }
-    #sidemenu li {
-        color: white;
-    }
+   
     nav img {
     height: 200px;
         width: 100px; /* Decrease logo size */
@@ -432,10 +430,11 @@ margin-bottom: 0;
         font-size: 12px; /* Decrease font size */
     }
     #sidemenu li {
+        color: white;
         position: relative; /* Add this line */
         display: block;
         top: 40px;
-        right: -50px;
+        right: -20px;
         margin: 7px;
         font-size: 10px; /* Decrease font size */
 
@@ -467,7 +466,14 @@ margin-bottom: 0;
         font-size: 15px;
     }
 
-
+   .sub-title-about-title{
+    position: relative;
+    margin-top: 20px;
+    left: -110px;
+   }
+   #about{
+    margin-left: 12px;
+   }
     
     .about-text{
         max-width: 400px;
@@ -475,6 +481,7 @@ margin-bottom: 0;
     }
     .about-col-1 video {
         height: 200px; /* Decrease video height */
+        width: auto;
     }
     .tab-links {
         font-size: 14px; /* Decrease font size */
