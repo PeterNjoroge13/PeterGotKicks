@@ -4,11 +4,11 @@ BETA Version
 Visit site at:
 [PeterKGotKicks.com](https://www.peterkgotkicks.com)
 
-What is PeterGotKicks?
+**What is PeterGotKicks?**
 
 Explore my database PeterGotKicks featuring iconic sneakers like the Jordan 1, 3, and more. Get an in-depth look at sneaker's history, design, and where to buy them from top resell marketplaces such as StockX, and Goat. Whether you're a seasoned collector or a sneaker enthusiast, PeterGotKicks is your ultimate destination for all things Jordan.
 
-Why was PeterGotKicks created?
+**Why was PeterGotKicks created?**
 
 Growing up, I've always been passionate about sneakers and the sneaker culture, especially Air Jordans. Now, as an adult in college, I still carry that same passion. Combining it with my newfound passion in Software Engineering Using technical skills like HTML/CSS, JS, Node/Express .js, RESTapi, and sneaker knowledge, I've created a website that young Peter could only dream of—PeterGotKicks
 
