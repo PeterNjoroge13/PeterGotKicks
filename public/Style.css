@@ -434,7 +434,7 @@ margin-bottom: 0;
         position: relative; /* Add this line */
         display: block;
         top: 40px;
-        right: -20px;
+        right: -50px;
         margin: 7px;
         font-size: 10px; /* Decrease font size */
 
@@ -448,7 +448,8 @@ margin-bottom: 0;
         top: 190px;
     }
     .work img{
-        width: 87%;
+        height: 100%;
+        width: 89%;
         border-radius: 10px;
         display: block;
         transition: tranform 0.5s;
@@ -462,8 +463,8 @@ margin-bottom: 0;
     }
     .layer p{
         color: #fff;
-        margin-bottom: 12px;
-        font-size: 15px;
+        margin-bottom: 8px;
+        font-size: 12px;
     }
 
    .sub-title-about-title{
