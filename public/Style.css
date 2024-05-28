@@ -408,7 +408,7 @@ margin-bottom: 0;
 @media screen and (max-width: 600px) {
     /* Styles for screens smaller than 480px */
     body {
-        font-size: 14px; /* Decrease font size for smaller screens */
+        font-size: 15px; /* Decrease font size for smaller screens */
     }
     .search-input {
         display: none; /* Hide search bar on small screens */
@@ -434,55 +434,15 @@ margin-bottom: 0;
         display: none;
     }
     .slideshow-container{
-        max-width: 80%;
+        max-width: 70%;
         position: relative;
         top: 190px;
     }
-    /* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 10px;
-    width: 10px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  
-    nav .fas {
-        display: none; /* Hide the icons by default */
-        color: white;
-        font-size: 25px;
-    }
-    nav ul {
-        background: black;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition: right 0.5s;
-    }
-    nav ul li {
-        display: block;
-        margin: 25px;
-    }
-    nav ul li a {
-        color: white;
-    }
-    nav ul .fas {
-        display: block; /* Display the times icon when the side menu is open */
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        color: white;
-        cursor: pointer;
-    }
-    .work-list {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust grid columns */
+   
+
+
+    .about-text{
+        font-size: 14px;
     }
     .about-col-1 video {
         height: 200px; /* Decrease video height */
