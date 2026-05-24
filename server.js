@@ -1,41 +1,33 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const SneaksAPI = require('sneaks-api');
+const SneaksAPI = require("sneaks-api");
 const sneaks = new SneaksAPI();
+const path = require("path");
 
-app.use('/Images', express.static('Images'));
+// Serve static files from the project root
+app.use(express.static(__dirname));
 
-app.get('/product/:productId', (req, res) => {
-  app.use('/Images', express.static('Images'));
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+// Return JSON prices — called by the price modal in the frontend
+app.get("/product/:productId", (req, res) => {
   const productId = req.params.productId;
-  sneaks.getProductPrices(productId, function(err, product){
+  sneaks.getProductPrices(productId, (err, product) => {
     if (err) {
-      console.error('Error getting product prices:', err);
-      res.send(`Error getting product prices: ${err.message}`);
-    } else {
-      // Get the price values
-      const stockXPrice = product.lowestResellPrice.stockX;
-      const goatPrice = product.lowestResellPrice.goat;
-      const flightClubPrice = product.lowestResellPrice.flightClub;
-
-      res.send(`
-        <html>
-          <head>
-            <title>Product Prices</title>
-          </head>
-          <body>
-            <h1>Product Prices</h1>
-            <img src="Images/sneakers/jordan1chicago.jpg">
-            <p>StockX Price: ${stockXPrice}+</p>
-            <p>Goat Price: ${goatPrice}+</p>
-            <p>Flight Club Price: ${flightClubPrice}+</p>
-          </body>
-        </html>
-      `);
+      console.error("Price lookup failed:", err.message);
+      return res.status(500).json({ error: err.message });
     }
+    res.json({
+      stockXPrice:    product.lowestResellPrice.stockX,
+      goatPrice:      product.lowestResellPrice.goat,
+      flightClubPrice: product.lowestResellPrice.flightClub,
+    });
   });
 });
 
-app.listen(3000, () => {
-  console.log('Server is running on http://localhost:3000');
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log(`PeterGotKicks running at http://localhost:${PORT}`);
 });

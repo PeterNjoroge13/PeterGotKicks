@@ -1,695 +1,768 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PeterGotKicks</title>
-    <link rel="stylesheet" href="Style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="PeterGotKicks — The definitive database for OG Air Jordan sneakers. 39 iconic colorways, Jordan 1 through 13.">
+  <title>PeterGotKicks — OG Jordan Database</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c11dea94f2.js" crossorigin="anonymous" defer></script>
+  <link rel="stylesheet" href="Style.css">
 </head>
-<script src="https://kit.fontawesome.com/c11dea94f2.js" crossorigin="anonymous"></script>
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="Images/logo1.jpg" class="logo">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#projects">Browse</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
-            </nav>
-            <div class="header-text">
-                <p>PeterGotKicks Number 1 Database for OG Jordan Sneakers </p>
-            </div>
-                <!-- -----search--------- -->
-        </div>
-        <div class="search">
-            <form name ="Search"> 
-                <i class="fa-solid fa-search search-icon"></i>
-                
-            </form>
-            <input class= "search-input" id="searchInput" type="search" placeholder="Search">
-        </div>
-    <!-- -----Slider--------- -->
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="Images/sneakers/wearingjordan1.png" style="width:100%">
-        </div>
-    
-        <div class="mySlides fade">
-            <img src="Images/sneakers/mikewearing3s.jpg" style="width:100%">
-        </div>
-    
-        <div class="mySlides fade">
-            <img src="Images/sneakers/wearingJordan11.png" style="width:100%">
-        </div>
-    
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ================================================================ NAVIGATION ================================================================ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="Images/logo1.jpg" alt="PeterGotKicks logo">
+        <span>PeterGotKicks</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#hero"   class="nav-link">Home</a></li>
+        <li><a href="#browse" class="nav-link">Browse</a></li>
+        <li><a href="#about"  class="nav-link">About</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="fav-nav-btn" id="favNavBtn" title="Show favorites">
+          <i class="fa-solid fa-heart"></i>
+          <span class="fav-badge hidden" id="favCount">0</span>
+        </button>
+      </div>
     </div>
-    <br>
-    
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
+  </nav>
+
+  <!-- ================================================================ HERO ================================================================ -->
+  <section id="hero">
+    <div class="hero-slides">
+      <div class="hero-slide active" style="--img: url('Images/sneakers/wearingjordan1.png')"></div>
+      <div class="hero-slide"        style="--img: url('Images/sneakers/mikewearing3s.jpg')"></div>
+      <div class="hero-slide"        style="--img: url('Images/sneakers/wearingJordan11.png')"></div>
     </div>
-    <!-- -----Jordans First ROW--------- -->
-    <div id="projects">
-        <div class="container">
-            <h1 class="sub-title">Retro Jordans</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="Images/sneakers/Jordan1Bred.jpg">
-                    <div class="layer">
-                        <h3>Jordan 1 "Bred"</h3>
-                        <p>The Air Jordan 1 "Bred" is a classic sneaker first released in 1985.
-                             It features a black and red colorway.
-                              It is highly coveted by sneaker enthusiasts for its iconic design and association with Michael Jordan.</p>
-                        <a href="https://github.com/PeterNjoroge13/HospitalManagementDatabase"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="Images/sneakers/Jordan1Royal.jpg">
-                    <div class="layer">
-                        <h3>Jordan 1 "Royal"</h3>
-                        <p>The Air Jordan 1 "Royal" is another iconic colorway of the Air Jordan 1 silhouette.
-                             It features a black and royal blue color scheme, first released in 1985 alongside the "Bred" colorway.
-                              Like the "Bred," the "Royal" is highly sought after by sneaker collectors and fans of the Air Jordan line.</p>
-                              <a href="http://localhost:3000/product/854262-001" class="sneaker-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="Images/sneakers/jordan1chicago.jpg">
-                    <div class="layer">
-                        <h3>Jordan 1 "Chicago" </h3>
-<p>The Air Jordan 1 "Chicago" is one of the most iconic and sought-after colorways of the Air Jordan 1 silhouette. 
-    It features a classic white, black, and red color scheme, paying homage to the Chicago Bulls, Michael Jordan's team.
-    The "Chicago" colorway was first released in 1985 and has been re-released several times due to its popularity among sneaker enthusiasts.</p>
-    <a href="http://localhost:3000/product/854262-001" class="sneaker-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-</div>
-            </div>
-            </div>
-            <a href="#" class="btn" onclick="toggleContent(event)" id="toggleButton">See More</a>      
-        </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">The Ultimate OG Jordan Encyclopedia</p>
+      <h1 class="hero-title">
+        <span class="hero-title-line">Peter</span>
+        <span class="hero-title-line accent">Got</span>
+        <span class="hero-title-line">Kicks</span>
+      </h1>
+      <p class="hero-sub">39 iconic colorways. 13 legendary models. One definitive database.</p>
+      <div class="hero-ctas">
+        <a href="#browse" class="btn-primary"><i class="fa-solid fa-table-cells"></i> Browse Collection</a>
+        <a href="#about"  class="btn-ghost"><i class="fa-solid fa-play"></i> Our Story</a>
+      </div>
     </div>
-    <!-- -----Jordans Second ROW--------- -->
-    <div id="projects">
-        <div class="container">
-            <div class="work-list" id="row2">
-                <div class="work" >
-                    <img src="Images/sneakers/Jordan2Chicago.jpg">
-                    <div class="layer">
-                        <h3>Jordan 2 "Chicago"</h3>
-                        <p>The Air Jordan 2 "Chicago" is a retro basketball shoe originally released in 1986. 
-                            It features a white leather upper with red and black accents, including a faux lizard skin texture. 
-                            The shoe is part of Michael Jordan's signature line and has been re-released multiple times as a retro model.</p>
-                        <a href="https://github.com/PeterNjoroge13/HospitalManagementDatabase"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="Images/sneakers/jordan2WhiteRed.jpg">
-                    <div class="layer">
-                        <h3>Jordan 2 "White/Red"</h3>
-                        <p>The Air Jordan 2 "White/Red" is a clean and classic colorway of Michael Jordan's second signature shoe. 
-                            Released in 1986, this color scheme features a predominantly white leather upper with red accents on the heel, ankle area, and outsole.
-                             The design is simple yet stylish, offering a timeless look that pays homage to the early days of Jordan Brand.</p>
-                        <a href="https://gitfront.io/r/PeterNj/nkHfyr3dq37y/Peter-Njoroge-Projects/"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="Images/sneakers/Jordan2ChicagoLow.jpg">
-                    <div class="layer">
-                        <h3>Jordan 2 "Chicago Low" </h3>
-                        <p>The Air Jordan 2 "Chicago" Low is a low-top version of the classic Air Jordan 2 "Chicago" colorway. 
-                            It features a white leather upper with red accents on the heel, tongue, and outsole, as well as black detailing. 
-                            The design pays homage to the original Air Jordan 2 "Chicago" colorway, which was famously worn by Michael Jordan during the 1987-1988 NBA season.</p>
-                        <a href="https://docs.google.com/presentation/d/1LcwFmxdH8cMm3QzI6pzajGubWqsy_Mw0POo9pj2a1Ao/edit#slide=id.g285f4baae2f_0_40" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                </div>
-            </div>
-           
-
-                <!-- -----Jordans Third ROW--------- -->
-                <div id="projects">
-                    <div class="container">
-                        <div class="work-list" id="row3">
-                            <div class="work">
-                                <img src="Images/sneakers/Jordan3WhiteCement.jpg">
-                                <div class="layer">
-                                    <h3>Jordan 3 "White Cement"</h3>
-                                    <p>The Air Jordan 3 "White Cement" is a classic colorway of the Air Jordan 3 model. It features a white leather upper with elephant print overlays on the toe and heel.
-                                       The shoe is accented with black and red detailing, was originally released in 1988.
-                                         The colorway is highly regarded among sneaker enthusiasts and is considered one of the most iconic Air Jordan colorways of all time.</p>
-                                    <a href="https://github.com/PeterNjoroge13/HospitalManagementDatabase"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-                            <div class="work">
-                                <img src="Images/sneakers/Jordan3blackcement.jpg">
-                                <div class="layer">
-                                    <h3>Jordan 3 "Black Cement"</h3>
-                                    <p>The Air Jordan 3 "Black Cement" is a classic sneaker that gained fame for its appearance on the feet of Michael Jordan during the 1988 NBA Dunk Contest, where he soared from the free-throw line. 
-                                        Jordan 3 "Black Cement" is widely regarded as one of the greatest sneakers of all time, both for its design and its significance in sneaker and basketball history.
-                                        *MY PERSONAL FAVORITE*
-                                    </p>
-                                    <a href="https://gitfront.io/r/PeterNj/nkHfyr3dq37y/Peter-Njoroge-Projects/"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-                            <div class="work">
-                                <img src="Images/sneakers/Jordan3TrueBlue.jpg">
-                                <div class="layer">
-                                    <h3>Jordan 3 "True Blue" </h3>
-                                    <p>The Air Jordan 3 "True Blue" is a highly sought-after colorway of the iconic Air Jordan 3 silhouette. 
-                                        Originally released in 1988, the "True Blue" color scheme features a predominantly white leather upper with elephant print overlays on the toe and heel. </p>
-                                    <a href="https://docs.google.com/presentation/d/1LcwFmxdH8cMm3QzI6pzajGubWqsy_Mw0POo9pj2a1Ao/edit#slide=id.g285f4baae2f_0_40" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                       <!-- -----Jordans Fourth ROW--------- -->
-                       <div id="projects">
-                        <div class="container">
-                            <div class="work-list" id="row4">
-                                <div class="work">
-                                    <img src="Images/sneakers/Jordan4WhiteCement.jpg">
-                                    <div class="layer">
-                                        <h3>Jordan 4 "White Cement"</h3>
-                                        <p>The Air Jordan 4 "White Cement" is another iconic colorway of the Air Jordan line.
-                                             Originally released in 1989, the "White Cement" color scheme features a white leather upper with cement grey accents on the midsole, lace tabs, and heel. .</p>
-                                        <a href="https://github.com/PeterNjoroge13/HospitalManagementDatabase"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                    </div>
-                                </div>
-                                <div class="work">
-                                    <img src="Images/sneakers/Jordan4bred.jpg">
-                                    <div class="layer">
-                                        <h3>Jordan 4 "Bred"</h3>
-                                        <p>The Air Jordan 4 "Bred," short for "Black and Red," is one of the most iconic and beloved colorways of the Air Jordan line.
-                                             First released in 1989, the "Bred" color scheme features a predominantly black upper with contrasting red accents on the midsole, inner lining, heel tab, and outsole. 
-                                        </p>
-                                        <a href="https://gitfront.io/r/PeterNj/nkHfyr3dq37y/Peter-Njoroge-Projects/"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                    </div>
-                                </div>
-                                <div class="work">
-                                    <img src="Images/sneakers/Jordan4Firered.jpg">
-                                    <div class="layer">
-                                        <h3>Jordan 4 "Fire Red" </h3>
-                                        <p>The Air Jordan 4 "Fire Red" is a classic colorway of the Air Jordan line. Originally released in 1989, the "Fire Red"
-                                             color scheme features a white leather upper with black accents on the wings, laces, and heel. 
-                                              The "Fire Red" 4s are known for their clean and timeless look, making them a sought-after pair among sneaker collectors and fans of the Jordan brand. </p>
-                                        <a href="https://docs.google.com/presentation/d/1LcwFmxdH8cMm3QzI6pzajGubWqsy_Mw0POo9pj2a1Ao/edit#slide=id.g285f4baae2f_0_40" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                             <!-- -----Jordans Fifth ROW--------- -->      
-
-                             <div id="projects">
-                                <div class="container">
-                                    <div class="work-list" id="row5">
-                                        <div class="work">
-                                            <img src="Images/sneakers/jordan5grape.jpg">
-                                            <div class="layer">
-                                                <h3>Jordan 5 "Fresh Prince/Grape"</h3>
-                                                <p>The Air Jordan 5 "Fresh Prince," also known as the "Grape" colorway, is a popular iteration of the Air Jordan 5 silhouette. 
-                                                    Originally released in 1990, the "Grape" color scheme features a predominantly white leather upper with accents of emerald green and grape purple. 
-                                                    The "Fresh Prince" nickname comes from Will Smith's character on the TV show "The Fresh Prince of Bel-Air,".</p>
-                                                <a href="https://github.com/PeterNjoroge13/HospitalManagementDatabase"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="work">
-                                            <img src="Images/sneakers/Jordan5Firerec.jpg">
-                                            <div class="layer">
-                                                <h3>Jordan 5 "Fire Red"</h3>
-                                                <p>The Air Jordan 5 "Fire Red" is a classic colorway of the Air Jordan 5 silhouette. 
-                                                    Originally released in 1990, the "Fire Red" color scheme features a white leather upper with black accents on the midsole, inner lining, and lace lock. The shoe is highlighted by its vibrant fire red accents on the midsole, tongue, and Jumpman logo on the heel.
-                                                </p>
-                                                <a href="https://gitfront.io/r/PeterNj/nkHfyr3dq37y/Peter-Njoroge-Projects/"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="work">
-                                            <img src="Images/sneakers/Jordan5mattalic.jpg">
-                                            <div class="layer">
-                                                <h3>Jordan 5 "Black Metallic" </h3>
-                                                <p>The Air Jordan 5 "Metallic" is a classic colorway of the Air Jordan 5 silhouette. 
-                                                    Originally released in 1990, the shoe features a black nubuck upper with silver reflective tongue and clear lace locks.
-                                                     The design is completed with a translucent outsole and the iconic shark tooth detailing on the midsole. The "Metallic" nickname comes from the metallic silver accents found throughout the shoe, giving it a sleek and futuristic look. </p>
-                                                <a href="https://docs.google.com/presentation/d/1LcwFmxdH8cMm3QzI6pzajGubWqsy_Mw0POo9pj2a1Ao/edit#slide=id.g285f4baae2f_0_40" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- -----Jordans Sixth ROW--------- -->  
-                                    <div id="projects">
-                                        <div class="container">
-                                            <div class="work-list" id="row6">
-                                                <div class="work">
-                                                    <img src="Images/sneakers/Jordan6Carmine.jpg">
-                                                    <div class="layer">
-                                                        <h3>Jordan 6 "Carmine"</h3>
-                                                        <p>TThe Air Jordan 6 "Carmine" is a highly coveted colorway of the iconic Air Jordan 6 silhouette.
-                                                             Originally released in 1991, the "Carmine" color scheme features a white leather upper with bold carmine red accents on the midsole,
-                                                              heel tab, and tongue. ".</p>
-                                                        <a href="#"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="work">
-                                                    <img src="Images/sneakers/jordan6InfaredWhite.jpg">
-                                                    <div class="layer">
-                                                        <h3>Jordan 6 "Infared White"</h3>
-                                                        <p>The Air Jordan 6 "White/Infrared" is a clean and iconic colorway of the Air Jordan 6 silhouette.
-                                                             Originally released in 1991, this colorway features a white leather upper with infrared accents on the midsole, heel tab, and lace lock.
-                                                        </p>
-                                                        <a href="#"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="work">
-                                                    <img src="Images/sneakers/Jordam6BlackInfared.jpg">
-                                                    <div class="layer">
-                                                        <h3>Jordan 6 "Infared Black" </h3>
-                                                        <p>The Air Jordan 6 "Black/Infrared," also known as the "Infrared 23," is a classic colorway of the Air Jordan 6 silhouette.
-                                                             Originally released in 1991, this colorway features a black nubuck upper with infrared accents on the midsole, heel tab, and lace lock. T </p>
-                                                        <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                                </div>    
-                                    <!-- -----Jordans seventh ROW--------- -->      
-                                    <div id="projects">
-                                        <div class="container">
-                                            <div class="work-list" id="row7">
-                                                <div class="work">
-                                                    <img src="Images/sneakers/jordan7olymic.jpg">
-                                                    <div class="layer">
-                                                        <h3>Jordan 7 "Olympic"</h3>
-                                                        <p>The Air Jordan 7 "Olympic" was originally released in 1992. 
-                                                            It features a white leather upper with metallic silver accents, navy blue and red detailing, and a special "9" on the heel tab to commemorate Michael Jordan's jersey number during the 1992 Olympics in Barcelona. 
-                                                            The shoe is famous for being worn by Jordan during the Dream Team's gold medal run.</p>
-                                                        <a href="https://github.com/PeterNjoroge13/HospitalManagementDatabase"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="work">
-                                                    <img src="Images/sneakers/jordan7raptor.jpg">
-                                                    <div class="layer">
-                                                        <h3>Jordan 7 "Raptors" </h3>
-                                                        <p>TAir Jordan 7 "Raptors" - Originally released in 1992, the Air Jordan 7 "Raptors" features a black nubuck upper with dark purple, red, and green accents.
-                                                             The colorway pays homage to the Toronto Raptors, one of the teams in the NBA. </p>
-                                                        <a href="https://docs.google.com/presentation/d/1LcwFmxdH8cMm3QzI6pzajGubWqsy_Mw0POo9pj2a1Ao/edit#slide=id.g285f4baae2f_0_40" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="work">
-                                                    <img src="Images/sneakers/jordan7hare.jpg">
-                                                    <div class="layer">
-                                                        <h3>Jordan 7 "Hare"</h3>
-                                                        <p>Air Jordan 7 "Hare" - Originally released in 1992, the Air Jordan 7 "Hare" features a white leather upper with light grey underlays and
-                                                             colorful accents inspired by the iconic "Hare" cartoon character from the "Looney Tunes" series. It is known for its vibrant color scheme and classic design.
-                                                        </p>
-                                                        <a href="https://gitfront.io/r/PeterNj/nkHfyr3dq37y/Peter-Njoroge-Projects/"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                    <!-- -----Jordans 8th ROW--------- -->      
-                                    <div id="projects">
-                                        <div class="container">
-                                            <div class="work-list" id="row8">
-                                                <div class="work">
-                                                    <img src="Images/sneakers/jordan8aqua.jpg">
-                                                    <div class="layer">
-                                                        <h3>Jordan 8 "Aqua"</h3>
-                                                        <p>The Air Jordan 8 "Aqua" originally released in 1993. It features a bold color scheme with a black nubuck upper,
-                                                             purple and aqua accents, and a unique midfoot strap design. The shoe also includes iconic details like the chenille tongue patch and graphic print on the inner lining.</p>
-                                                        <a href="https://github.com/PeterNjoroge13/HospitalManagementDatabase"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="work">
-                                                    <img src="Images/sneakers/Jordan8bugsbynny.jpg">
-                                                    <div class="layer">
-                                                        <h3>Jordan 8 "Bugs Bunny" </h3>
-                                                        <p>The Air Jordan 8 "Bugs Bunny" was also released in 1993, inspired by the famous Looney Tunes character.
-                                                             It features a white leather upper with grey and red accents, along with a fuzzy chenille tongue patch reminiscent of Bugs Bunny's fur.
-                                                              The shoe is known for its playful design and vibrant color scheme. </p>
-                                                        <a href="https://docs.google.com/presentation/d/1LcwFmxdH8cMm3QzI6pzajGubWqsy_Mw0POo9pj2a1Ao/edit#slide=id.g285f4baae2f_0_40" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="work">
-                                                    <img src="Images/sneakers/Jordan8playofff.jpg">
-                                                    <div class="layer">
-                                                        <h3>Jordan 8 "Playoff"</h3>
-                                                        <p>The Air Jordan 8 "Playoff" first released in 1993 as well.
-                                                             It features a predominantly black leather upper with contrasting red and white accents, giving it a classic and versatile look. 
-                                                             The shoe's design includes a unique crisscross strap system for added lockdown and support
-                                                        </p>
-                                                        <a href="https://gitfront.io/r/PeterNj/nkHfyr3dq37y/Peter-Njoroge-Projects/"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                      <!-- -----Jordans 9th ROW--------- -->    
-                                      <div id="projects">
-                                        <div class="container">
-                                            <div class="work-list" id="row9">
-                                                <div class="work">
-                                                    <img src="Images/sneakers/Jordan9powderblue.jpg">
-                                                    <div class="layer">
-                                                        <h3>Jordan 9 "Powder Blue"</h3>
-                                                        <p>The Air Jordan 9 "Powder Blue": This colorway was originally released in 1993 and features a white leather upper with powder blue accents on the midsole, 
-                                                            lining, and branding. It is known for its clean and classic look, making it a favorite among sneaker enthusiasts.</p>
-                                                        <a href="https://github.com/PeterNjoroge13/HospitalManagementDatabase"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="work">
-                                                    <img src="Images/sneakers/Jordan9Olive.jpg">
-                                                    <div class="layer">
-                                                        <h3>Jordan 9 "Olive" </h3>
-                                                        <p>The Air Jordan 9 "Olive" first released in 1994.
-                                                             It features a black leather upper with olive green accents, giving it a militaristic and rugged look.
-                                                             The shoe is known for its unique colorway and clean, simple design. </p>
-                                                        <a href="https://docs.google.com/presentation/d/1LcwFmxdH8cMm3QzI6pzajGubWqsy_Mw0POo9pj2a1Ao/edit#slide=id.g285f4baae2f_0_40" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="work">
-                                                    <img src="Images/sneakers/Jordan9Spacejam.jpg">
-                                                    <div class="layer">
-                                                        <h3>Jordan 9 "Space Jam"</h3>
-                                                        <p>The Air Jordan 9 "Space Jam" is a special colorway inspired by the classic Warner Bros. movie "Space Jam," 
-                                                            featuring Michael Jordan alongside the Looney Tunes characters. The shoe features a black nubuck upper with white and blue accents, reminiscent of the "Space Jam" movie's color scheme. Originally released in 1993,
-                                                             it has become a sought-after collector's item
-                                                        </p>
-                                                        <a href="https://gitfront.io/r/PeterNj/nkHfyr3dq37y/Peter-Njoroge-Projects/"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>    
-                                              <!-- -----Jordans 10th ROW--------- -->    
-                                      <div id="projects">
-                                        <div class="container">
-                                            <div class="work-list" id="row10">
-                                                <div class="work">
-                                                    <img src="Images/sneakers/jordan10steelgrey.jpg.webp">
-                                                    <div class="layer">
-                                                        <h3>Jordan 10 "Steel Grey"</h3>
-                                                        <p>The Air Jordan 10 "Steel Grey" is a more understated colorway,
-                                                             featuring a white leather upper with steel grey accents on the outsole, lacing system, and Jumpman logo. Released in 1994, this colorway offers a versatile and timeless look that can be easily paired with various outfits</p>
-                                                        <a href="https://github.com/PeterNjoroge13/HospitalManagementDatabase"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="work">
-                                                    <img src="Images/sneakers/jordan10powderblue.jpg.webp">
-                                                    <div class="layer">
-                                                        <h3>Jordan 10 "Powder Blue" </h3>
-                                                        <p>The Air Jordan 10 "Powder Blue" features a clean and classic color scheme with a white leather upper and powder blue accents on the outsole, 
-                                                            lining, and Jumpman logo. Originally released in 1995, this colorway is known for its simple yet stylish look. </p>
-                                                        <a href="https://docs.google.com/presentation/d/1LcwFmxdH8cMm3QzI6pzajGubWqsy_Mw0POo9pj2a1Ao/edit#slide=id.g285f4baae2f_0_40" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="work">
-                                                    <img src="Images/sneakers/jordan10chicago.jpg.webp">
-                                                    <div class="layer">
-                                                        <h3>Jordan 10 "Chicago"</h3>
-                                                        <p>The Air Jordan 10 "Chicago" is a iconic colorway that pays homage to Michael Jordan's time with the Chicago Bulls. It features a white leather upper with black and red detailing,
-                                                             representing the team's colors. Originally released in 1995, it's one of the most beloved and recognizable Jordan 10 colorways.
-                                                        </p>
-                                                        <a href="https://gitfront.io/r/PeterNj/nkHfyr3dq37y/Peter-Njoroge-Projects/"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>    
-                                             <!-- -----Jordans 11th ROW--------- -->    
-                                      <div id="projects">
-                                        <div class="container">
-                                            <div class="work-list" id="row11">
-                                                <div class="work">
-                                                    <img src="Images/sneakers/Jordan11Bred.jpg.webp">
-                                                    <div class="layer">
-                                                        <h3>Jordan 11 "Bred"</h3>
-                                                        <p>
-                                                            The Air Jordan 11 "Bred," short for "Black and Red," is one of the most iconic Jordan colorways. It features a black upper with red accents, including the patent leather mudguard. First released in 1996, this colorway is known for its bold and striking appearance.
-                                                        </p>
-                                                        <a href="https://github.com/PeterNjoroge13/HospitalManagementDatabase"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="work">
-                                                    <img src="Images/sneakers/jordan11concord.jpg.webp">
-                                                    <div class="layer">
-                                                        <h3>Jordan 11 "Concord" </h3>
-                                                        <p>The Air Jordan 11 "Concord" is another iconic colorway, featuring a white upper with black patent leather and Concord Purple accents. Originally released in 1995, this colorway is highly regarded for its clean and sophisticated look, making it a favorite among collectors. </p>
-                                                        <a href="https://docs.google.com/presentation/d/1LcwFmxdH8cMm3QzI6pzajGubWqsy_Mw0POo9pj2a1Ao/edit#slide=id.g285f4baae2f_0_40" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="work">
-                                                    <img src="Images/sneakers/Jordan11Columbia.jpg">
-                                                    <div class="layer">
-                                                        <h3>Jordan 11 "Columbia"</h3>
-                                                        <p>The Air Jordan 11 "Columbia," also known as the "Legend Blue," features a clean white upper with Columbia Blue patent leather and accents. Originally released in 1996, this colorway is highly sought after for its classic and versatile look
-                                                        </p>
-                                                        <a href="https://gitfront.io/r/PeterNj/nkHfyr3dq37y/Peter-Njoroge-Projects/"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>    
-                                              <!-- -----Jordans 12th ROW--------- -->    
-                                      <div id="projects">
-                                        <div class="container">
-                                            <div class="work-list" id="row12">
-                                                <div class="work">
-                                                    <img src="Images/sneakers/Jordan12Cherry.jpg">
-                                                    <div class="layer">
-                                                        <h3>Jordan 12 "Cherry"</h3>
-                                                        <p>
-                                                            The Air Jordan 12 "Cherry" is a vibrant colorway that features a white and red color scheme. Originally released in 1997, this colorway is characterized by its white leather upper with red accents on the mudguard, outsole, and branding.
-                                                        </p>
-                                                        <a href="https://github.com/PeterNjoroge13/HospitalManagementDatabase"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="work">
-                                                    <img src="Images/sneakers/jordan12flugame.jpg.webp">
-                                                    <div class="layer">
-                                                        <h3>Jordan 12 "Flu Game" </h3>
-                                                        <p>  The Air Jordan 12 "Flu Game" is a legendary colorway worn by Michael Jordan during Game 5 of the 1997 NBA Finals, where he scored 38 points while battling flu-like symptoms. The shoe features a black and red color scheme, with a black upper and red accents, including the outsole and heel tab. </p>
-                                                        <a href="https://docs.google.com/presentation/d/1LcwFmxdH8cMm3QzI6pzajGubWqsy_Mw0POo9pj2a1Ao/edit#slide=id.g285f4baae2f_0_40" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                                <div class="work">
-                                                    <img src="Images/sneakers/jordan12taxi.jpg.webp">
-                                                    <div class="layer">
-                                                        <h3>Jordan 12 "Taxi"</h3>
-                                                        <p>
-                                                            The Air Jordan 12 "Taxi" is a classic colorway that features a white leather upper with black and taxi yellow accents. Originally released in 1996, this colorway is known for its clean and timeless look, inspired by New York City taxis.
-                                                        </p>
-                                                        <a href="https://gitfront.io/r/PeterNj/nkHfyr3dq37y/Peter-Njoroge-Projects/"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>    
-                                           
- <!-- -----Jordans 13th ROW--------- -->    
- <div id="projects">
-    <div class="container">
-        <div class="work-list" id="row13">
-            <div class="work">
-                <img src="Images/sneakers/jordan13bred.jpg.webp">
-                <div class="layer">
-                    <h3>Jordan 13 "Bred"</h3>
-                    <p>
-                        The Air Jordan 13 "Bred" is a popular colorway that features a black leather upper with red suede accents on the midsole and heel. Originally released in 1998, this colorway is known for its striking color blocking and sleek design.
-                    </p>
-                    <a href="https://github.com/PeterNjoroge13/HospitalManagementDatabase"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="Images/sneakers/jordan13hegotgame.jpg.webp">
-                <div class="layer">
-                    <h3>Jordan 13 "He Got Game" </h3>
-                    <p>TThe Air Jordan 13 "He Got Game" is a classic colorway that gained fame from its appearance in the 1998 movie of the same name, where Denzel Washington's character famously wears them. The shoe features a white leather upper with black and red accents, including the iconic holographic eye on the heel. </p>
-                    <a href="https://docs.google.com/presentation/d/1LcwFmxdH8cMm3QzI6pzajGubWqsy_Mw0POo9pj2a1Ao/edit#slide=id.g285f4baae2f_0_40" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="Images/sneakers/Jordan13playoff.jpg.webp">
-                <div class="layer">
-                    <h3>Jordan 13 "Playoff"</h3>
-                    <p>The Air Jordan 13 "Playoff" is another iconic colorway that was worn by Michael Jordan during the 1997 NBA Playoffs en route to his fifth championship with the Chicago Bulls. The shoe features a black leather upper with red accents and a unique panther paw-inspired outsole.
-                    </p>
-                    <a href="https://gitfront.io/r/PeterNj/nkHfyr3dq37y/Peter-Njoroge-Projects/"  target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-        </div>    
-
+    <div class="hero-dots">
+      <button class="hdot active" onclick="goToSlide(0)"></button>
+      <button class="hdot"        onclick="goToSlide(1)"></button>
+      <button class="hdot"        onclick="goToSlide(2)"></button>
     </div>
-    <a href="#" class="btn" onclick="toggleContentLess(event)" id="toggleButtonLess" style="display: none;">See Less</a>
-</div>
-                                    
- <!-- -----About sections--------- -->    
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <a href="Images/RPReplay_Final1714281366.mp4" target="_blank">
-                    <video width="320" height="240" controls>
-                        <source src="Images/RPReplay_Final1714281366.mp4" type="video/quicktime">
-                        Your browser does not support the video tag.
-                    </video>
-                </a>
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title-about-title">About PeterGotKicks</h1>
-                
+    <div class="hero-scroll"><span>Scroll</span><i class="fa-solid fa-arrow-down"></i></div>
+  </section>
 
-                <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('What is PeterGotKicks?')">What is PeterGotKicks?</p>
-                    <p class="tab-links" onclick="opentab('Why was PeterGotKicksCreated?')">Why was PeterGotKicks Created?</p>
-             
-                </div>
-                <div class="tab-contents active-tabs" id="What is PeterGotKicks?">
-                    <ul>
-                        <li><span>What is PeterGotKicks?</span><br>
-                            <p class="about-text">Discover the world of OG Jordan sneakers on PeterGotKicks! Explore our database featuring iconic sneakers like the Jordan 1, 3, and more. Get an in-depth look at each sneaker's history, design, and where to buy them from top resell marketplaces such as StockX, Goat, and flightClub. Whether you're a seasoned collector or a sneaker enthusiast, PeterGotKicks is your ultimate destination for all things Jordan. Start your journey today!</p>
-                            </li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id="Why was PeterGotKicksCreated?">
-                    <ul>
-                        <li><span>Why was PeterGotKicksCreated?</span><br>
-                            <p class="about-text">Growing up, I've always been passionate about sneakers and the sneaker culture, especially Air Jordans. Now, as an adult in college, I still carry that same passion. Combining it with my newfound passion in Software Engineering Using technical skills like HTML,CSS, JS and sneaker knowledge, I've created a website that young Peter could only dream of—PeterGotKicks
-                            </p> 
-                            <p class="red-text"> <br>&larr;   Enjoy the video of 13 Year old me Unboxing Jordan 12 "Flu Games"! </p>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </div>
-        </div> 
-    </div> 
+  <!-- ================================================================ STATS ================================================================ -->
+  <section id="stats">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <span class="stat-num" data-target="39">0</span>
+        <span class="stat-label">Colorways</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="13">0</span>
+        <span class="stat-label">Models</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="1985">0</span>
+        <span class="stat-label">Est. Year</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="6">0</span>
+        <span class="stat-label">Championships</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================ BROWSE ================================================================ -->
+  <section id="browse">
+    <!-- Featured -->
+    <div class="featured-strip" id="featuredStrip"></div>
+
+    <div class="browse-header">
+      <h2 class="section-title">The <span class="accent">Collection</span></h2>
+      <p class="section-sub">Every OG Jordan colorway, documented.</p>
     </div>
 
-
-<!-- -----Footer--------- -->
-<div class="footer">
-<div class="footer-text">
-    <div class="social-icons">  
-    <a href="https://www.linkedin.com/in/peter-njoroge13/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/PeterNjoroge13" target="_blank"> <i class="fab fa-github"></i></a>
-    </div>
-    <p>Developed, and Envisioned by Peter Njoroge </p>
+    <div class="controls">
+      <div class="search-wrap">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="search" id="searchInput"
+               placeholder="Search colorway, model, year, style code…  (press / to focus)"
+               autocomplete="off" spellcheck="false">
+        <kbd class="search-kbd">/</kbd>
+      </div>
+      <div class="control-row">
+        <div class="filter-pills" id="filterPills">
+          <button class="pill active" data-filter="all">All</button>
+          <span class="pill-divider"></span>
+          <button class="pill" data-era="80s">1980s</button>
+          <button class="pill" data-era="90s">1990s</button>
+          <span class="pill-divider"></span>
         </div>
+        <div class="sort-wrap">
+          <label for="sortSelect"><i class="fa-solid fa-arrow-up-arrow-down"></i></label>
+          <select id="sortSelect">
+            <option value="default">Default</option>
+            <option value="year-asc">Oldest first</option>
+            <option value="year-desc">Newest first</option>
+            <option value="name-asc">A → Z</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+            <option value="grail-desc">Grail Rating</option>
+          </select>
+        </div>
+        <button class="fav-filter-btn" id="favFilterBtn">
+          <i class="fa-regular fa-heart"></i> Saved
+        </button>
+      </div>
+      <div class="results-info">
+        <span id="resultsCount">39</span> colorways
+        <button class="clear-filters hidden" id="clearFilters">× Clear</button>
+      </div>
     </div>
-    
-    <!-- -----Script for about--------- -->    
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
 
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tabs");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tabs");
-        }
-    </script>  
+    <div class="sneaker-grid" id="sneakerGrid"></div>
+    <div class="empty-state hidden" id="emptyState">
+      <i class="fa-solid fa-shoe-prints"></i>
+      <h3>No kicks found</h3>
+      <p>Try a different search or filter.</p>
+      <button class="btn-primary" onclick="resetAll()">Reset filters</button>
+    </div>
+  </section>
 
-       <!-- -----Script for slideshow--------- -->  
-       <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-    
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-    
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-    
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}    
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";  
-            dots[slideIndex-1].className += " active";
-        }
-    
-        setInterval(function(){ plusSlides(1) }, 4000); // Change slide every 6 seconds
-    </script>
+  <!-- ================================================================ ABOUT ================================================================ -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-media">
+        <div class="about-video-wrap">
+          <video controls poster="Images/sneakers/Jordan12Cherry.jpg">
+            <source src="Images/RPReplay_Final1714281366.mp4" type="video/mp4">
+          </video>
+          <div class="video-label">
+            <i class="fa-solid fa-circle-play"></i>
+            13-year-old Peter unboxing Jordan 12 "Flu Games"
+          </div>
+        </div>
+      </div>
+      <div class="about-content">
+        <p class="about-eyebrow">The Story</p>
+        <h2 class="about-title">About <span class="accent">PeterGot<br>Kicks</span></h2>
+        <div class="about-tabs">
+          <button class="atab active" data-tab="what">What is it?</button>
+          <button class="atab" data-tab="why">Why was it built?</button>
+        </div>
+        <div class="about-panel active" id="tab-what">
+          <p>Discover the world of OG Jordan sneakers on PeterGotKicks. Explore our database featuring iconic colorways from the Jordan 1 through 13. Get an in-depth look at each sneaker's history, design, and current resell prices from top marketplaces like StockX, GOAT, and Flight Club.</p>
+          <p>Whether you're a seasoned collector or just starting — PeterGotKicks is your definitive reference.</p>
+        </div>
+        <div class="about-panel" id="tab-why">
+          <p>Growing up, I was obsessed with Air Jordans. Now, as a Computer Science student at UMD, I combined that passion with my technical skills to build the website that young Peter could only dream of.</p>
+          <p class="about-highlight">← Hit play. That's 13-year-old me unboxing my Jordan 12 Flu Games.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-       <!-- -----Script for buttons--------- -->  
-    <script>
-  window.onload = function() {
-    for (let i = 2; i <= 13; i++) {
-        const row = document.getElementById('row' + i);
-        row.style.visibility = 'hidden';
-        row.style.height = '0';
-        row.style.overflow = 'hidden';
+  <!-- ================================================================ FOOTER ================================================================ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="Images/logo1.jpg" alt="PeterGotKicks" class="footer-logo">
+        <p>The #1 database for OG Air Jordan sneakers. Built by a sneakerhead, for sneakerheads.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="#hero">Home</a>
+        <a href="#browse">Browse Collection</a>
+        <a href="#about">About</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a class="social-link" href="https://www.linkedin.com/in/peter-njoroge13/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a class="social-link" href="https://github.com/PeterNjoroge13" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom">Designed &amp; developed by Peter Njoroge &mdash; UMD Computer Science</div>
+  </footer>
+
+  <!-- ================================================================ MOBILE BOTTOM NAV ================================================================ -->
+  <nav class="mobile-bottom-nav">
+    <a href="#hero"   class="mbn-item"><i class="fa-solid fa-house"></i><span>Home</span></a>
+    <a href="#browse" class="mbn-item"><i class="fa-solid fa-shoe-prints"></i><span>Browse</span></a>
+    <button class="mbn-item" id="mbnFav" onclick="toggleFavFilter()"><i class="fa-solid fa-heart"></i><span>Saved</span></button>
+    <a href="#about"  class="mbn-item"><i class="fa-solid fa-circle-info"></i><span>About</span></a>
+  </nav>
+
+  <!-- ================================================================ FLOATING BUTTONS ================================================================ -->
+  <button class="fab-random" id="fabRandom" title="Random kick" onclick="randomKick()">
+    <i class="fa-solid fa-shuffle"></i>
+  </button>
+  <button class="scroll-top hidden" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- ================================================================ MODAL ================================================================ -->
+  <div class="modal-backdrop hidden" id="modalBackdrop" onclick="closeModal()"></div>
+  <div class="price-modal hidden" id="priceModal" role="dialog" aria-modal="true">
+    <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+    <div id="modalContent"></div>
+    <div class="modal-nav-row" id="modalNavRow"></div>
+  </div>
+
+  <!-- ================================================================ LIGHTBOX ================================================================ -->
+  <div class="lightbox hidden" id="lightbox" onclick="closeLightbox()">
+    <img id="lightboxImg" src="" alt="">
+    <button class="lightbox-close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- ================================================================ SCRIPT ================================================================ -->
+  <script>
+    // ================================================================
+    // DATA
+    // ================================================================
+    const SNEAKERS = [
+      { id:  1, model:  1, colorway: 'Bred',               year: 1985, styleCode: '555088-001', retail: 170, priceRange: [220, 245], grail: 5, image: 'Images/sneakers/Jordan1Bred.jpg',            description: 'The Air Jordan 1 "Bred" is the colorway that started it all — released in 1985, banned by the NBA, worn by the greatest. The shoe that launched a dynasty.',                                                        funFact: 'Nike paid Jordan\'s $5,000 NBA fine every game he wore these in 1985 — turning a league ban into history\'s greatest marketing campaign.' },
+      { id:  2, model:  1, colorway: 'Royal',              year: 1985, styleCode: '554724-007', retail: 170, priceRange: [190, 215], grail: 4, image: 'Images/sneakers/Jordan1Royal.jpg',           description: 'Released alongside the Bred in 1985, the Royal features black and royal blue — equally rare, equally legendary. One of the most sought-after Jordan 1 colorways.',                                                 funFact: 'One of only two original 1985 colorways. Jordan wore both the Bred and Royal for just one season before switching to the Jordan 2.' },
+      { id:  3, model:  1, colorway: 'Chicago',            year: 1985, styleCode: '854262-075', retail: 180, priceRange: [265, 295], grail: 5, image: 'Images/sneakers/jordan1chicago.jpg',         description: 'White, black, and red — the Chicago pays direct homage to the Bulls. First dropped in 1985, re-released multiple times. Arguably the most iconic Jordan 1 of them all.',                                          funFact: 'The 2022 retro sold out instantly and hit $280+ on StockX within one hour. OG 1985 deadstock pairs have sold for over $15,000 at auction.' },
+      { id:  4, model:  2, colorway: 'Chicago',            year: 1986, styleCode: '385475-101', retail: 160, priceRange: [130, 150], grail: 2, image: 'Images/sneakers/Jordan2Chicago.jpg',         description: 'Michael\'s second signature shoe, originally released in 1986 and famously made in Italy. White leather, faux lizard skin texture, and red and black accents.',                                                      funFact: 'Made in Italy using luxury shoemaking techniques — the Jordan 2 was so refined that MJ initially refused to wear it on the court, preferring the Jordan 1.' },
+      { id:  5, model:  2, colorway: 'White / Red',        year: 1986, styleCode: '385475-161', retail: 160, priceRange: [110, 130], grail: 2, image: 'Images/sneakers/jordan2WhiteRed.jpg',        description: 'Clean white leather with red accents. First released in 1986, the White/Red 2 offers a timeless look that pays homage to the early Jordan Brand days.',                                                             funFact: 'The Jordan 2 is the most underrated silhouette in the entire line. Collectors who ignored it in the 90s now pay $200+ for clean originals.' },
+      { id:  6, model:  2, colorway: 'Chicago Low',        year: 1990, styleCode: 'DX4401-106', retail: 135, priceRange: [125, 145], grail: 2, image: 'Images/sneakers/Jordan2ChicagoLow.jpg',      description: 'A low-top take on the classic Chicago colorway. White with red accents and black detailing, paying homage to the Jordan 2 that MJ wore during the 1987–88 season.',                                                funFact: 'The low-top cut was a deliberate modern reinterpretation — Jordan Brand only introduced it after fans demanded a more wearable version of the Jordan 2.' },
+      { id:  7, model:  3, colorway: 'White Cement',       year: 1988, styleCode: '136064-105', retail: 190, priceRange: [175, 200], grail: 4, image: 'Images/sneakers/Jordan3WhiteCement.jpg',     description: 'The Jordan 3 introduced the visible Air unit and the Jumpman logo. The White Cement, with its elephant print overlays and black and red details, is one of the most iconic Air Jordan colorways ever.',              funFact: 'Tinker Hatfield got the idea for the exposed Air heel unit after watching a documentary about the Centre Pompidou building in Paris — architecture turned into footwear.' },
+      { id:  8, model:  3, colorway: 'Black Cement',       year: 1988, styleCode: '136064-010', retail: 190, priceRange: [180, 205], grail: 5, image: 'Images/sneakers/Jordan3blackcement.jpg',     description: 'Worn by Jordan during his legendary 1988 NBA Dunk Contest free-throw line dunk. Widely regarded as one of the greatest sneakers of all time. My personal favorite.',                                                funFact: 'Jordan won the Dunk Contest, MVP, Defensive Player of the Year, and scoring title in the same season he wore these. The Black Cement 3 is the shoe of the greatest individual season ever.' },
+      { id:  9, model:  3, colorway: 'True Blue',          year: 1988, styleCode: '136064-104', retail: 190, priceRange: [155, 175], grail: 3, image: 'Images/sneakers/Jordan3TrueBlue.jpg',        description: 'White leather with elephant print and True Blue accents. Originally released in 1988, the True Blue 3 stands apart from the pack with a refreshingly clean color scheme.',                                           funFact: 'The elephant print pattern took three Tinker Hatfield designers two weeks to perfect. Every colorway of the Jordan 3 features it — but the True Blue makes it most visible.' },
+      { id: 10, model:  4, colorway: 'White Cement',       year: 1989, styleCode: '308497-104', retail: 190, priceRange: [185, 205], grail: 4, image: 'Images/sneakers/Jordan4WhiteCement.jpg',     description: 'The White Cement 4 features a white leather upper with cement grey accents. Released in 1989, one of the cleanest 4 colorways with timeless appeal.',                                                              funFact: 'The Jordan 4 was the first Jordan sold globally — in Europe and Asia simultaneously. Nike\'s strategy to make Jordan a global icon rather than just an American star started here.' },
+      { id: 11, model:  4, colorway: 'Bred',               year: 1989, styleCode: '308497-060', retail: 210, priceRange: [225, 250], grail: 5, image: 'Images/sneakers/Jordan4bred.jpg',            description: 'Black with contrasting red midsole accents — the Bred 4 is one of the most iconic Jordan 4 colorways. First worn by Jordan in 1989, it remains a grail worldwide.',                                                funFact: 'Spike Lee\'s Mars Blackmon Nike ads featuring the Bred 4 are still studied in marketing courses today. They cost $200k to produce and generated over $20 million in brand value.' },
+      { id: 12, model:  4, colorway: 'Fire Red',           year: 1989, styleCode: '308497-110', retail: 190, priceRange: [165, 185], grail: 3, image: 'Images/sneakers/Jordan4Firered.jpg',         description: 'White leather with fire red and black accents — clean, timeless, universally loved. First released in 1989, the Fire Red 4 is one of the most wearable colorways.',                                                 funFact: 'The triple 1989 release — White Cement, Bred, and Fire Red — remains the most celebrated single-year Jordan 4 drop. Tinker Hatfield considers it his greatest triumph.' },
+      { id: 13, model:  5, colorway: 'Fresh Prince / Grape', year: 1990, styleCode: '136027-500', retail: 190, priceRange: [135, 155], grail: 3, image: 'Images/sneakers/jordan5grape.jpg',       description: 'Named after Will Smith\'s Fresh Prince character. White with emerald green and grape purple accents. One of the most beloved Jordan 5 colorways since 1990.',                                                         funFact: 'Will Smith wore these in multiple Fresh Prince episodes. In 2020 he revealed he still owns an original pair — and refuses to sell them for any price.' },
+      { id: 14, model:  5, colorway: 'Fire Red',           year: 1990, styleCode: '136027-100', retail: 190, priceRange: [125, 145], grail: 3, image: 'Images/sneakers/Jordan5Firerec.jpg',         description: 'White with black and fire red accents. The shark tooth midsole and reflective tongue make this a standout from Jordan\'s 1990 line.',                                                                               funFact: 'The shark tooth midsole was inspired by WWII P-51 Mustang fighter planes — the nose art painted on those aircraft directly influenced Tinker Hatfield\'s design.' },
+      { id: 15, model:  5, colorway: 'Black Metallic',     year: 1990, styleCode: '136027-010', retail: 190, priceRange: [140, 165], grail: 3, image: 'Images/sneakers/Jordan5mattalic.jpg',        description: 'Black nubuck with silver reflective tongue and translucent outsole. The Metallic 5\'s futuristic look from 1990 still turns heads today.',                                                                          funFact: 'The reflective tongue was functional, not just aesthetic — designed so Jordan could check his laces during timeouts without bending over. Performance design at its finest.' },
+      { id: 16, model:  6, colorway: 'Carmine',            year: 1991, styleCode: 'CT8529-106', retail: 190, priceRange: [170, 190], grail: 3, image: 'Images/sneakers/Jordan6Carmine.jpg',         description: 'The Jordan 6 was Jordan\'s shoe for his first championship in 1991. The Carmine features bold carmine red accents — one of the most coveted 6 colorways.',                                                          funFact: 'The tongue tab was designed so Jordan could pull them on in under three seconds during timeouts — a small ergonomic detail that defined the Jordan 6\'s entire design language.' },
+      { id: 17, model:  6, colorway: 'Infrared White',     year: 1991, styleCode: 'CT8529-126', retail: 190, priceRange: [165, 185], grail: 4, image: 'Images/sneakers/jordan6InfaredWhite.jpg',    description: 'THE championship shoe. Jordan wore the Infrared White 6s when he won his first NBA Championship in 1991. The infrared pop against white is timeless.',                                                              funFact: 'Jordan finally silenced the "no rings" critics in these. After the Game 6 buzzer, he collapsed on the court and wept. His father held him. He was wearing these.' },
+      { id: 18, model:  6, colorway: 'Black Infrared',     year: 1991, styleCode: '384664-023', retail: 190, priceRange: [150, 170], grail: 3, image: 'Images/sneakers/Jordam6BlackInfared.jpg',    description: 'Known as the "Infrared 23," this black nubuck with vivid infrared accents was originally released in 1991 and has been re-released multiple times.',                                                                funFact: 'The infrared color glows under UV blacklight — a feature Nike never officially advertised. Sneaker collectors have known about it for decades. Try it yourself.' },
+      { id: 19, model:  7, colorway: 'Olympic',            year: 1992, styleCode: '304775-133', retail: 190, priceRange: [135, 155], grail: 4, image: 'Images/sneakers/jordan7olymic.jpg',          description: 'Worn by Jordan and the Dream Team during the 1992 Barcelona Olympics gold medal run. One of the most historically significant Jordans ever made.',                                                                   funFact: 'The Dream Team won gold by an average of 44 points per game. Jordan averaged 14 points in just 19 minutes per game — he was barely trying and still the best on the court.' },
+      { id: 20, model:  7, colorway: 'Raptors',            year: 1992, styleCode: '304775-006', retail: 190, priceRange: [120, 140], grail: 2, image: 'Images/sneakers/jordan7raptor.jpg',          description: 'Black nubuck with dark purple, red, and green accents — the Raptors 7 is one of the most colorful and unique Jordan 7 colorways, originally released in 1992.',                                                    funFact: 'Named after the 1993 film Jurassic Park, not the Toronto NBA team — which didn\'t exist until 1995. The colorway literally predates the franchise it\'s named after.' },
+      { id: 21, model:  7, colorway: 'Hare',               year: 1992, styleCode: '304775-125', retail: 190, priceRange: [140, 160], grail: 3, image: 'Images/sneakers/jordan7hare.jpg',            description: 'Inspired by Bugs Bunny from Looney Tunes. The Hare 7 features a white base with playful multicolor accents. Released in 1992.',                                                                                    funFact: 'Part of the original Space Jam collection before the film released. Warner Bros. and Nike developed these together as a cultural crossover before "collabs" were a thing.' },
+      { id: 22, model:  8, colorway: 'Aqua',               year: 1993, styleCode: '305381-025', retail: 190, priceRange: [135, 155], grail: 3, image: 'Images/sneakers/jordan8aqua.jpg',            description: 'Black nubuck with purple and aqua accents, featuring the Jordan 8\'s signature midfoot strap. One of the most visually striking pairs in the entire Jordan line.',                                                  funFact: 'The Jordan 8 was the most complex Air Jordan to date — eight eyelets, two straps, chenille tongue patch. Tinker Hatfield spent six months on the design alone.' },
+      { id: 23, model:  8, colorway: 'Bugs Bunny',         year: 1993, styleCode: '305381-103', retail: 190, priceRange: [125, 145], grail: 3, image: 'Images/sneakers/Jordan8bugsbynny.jpg',       description: 'Inspired by the iconic Looney Tunes character. White leather with grey and red accents and a fuzzy chenille tongue patch. Playful, unique, collectible.',                                                           funFact: 'The chenille tongue patch replicates Bugs Bunny\'s actual fur texture. Jordan Brand embedded Looney Tunes character DNA into the construction of the shoe itself.' },
+      { id: 24, model:  8, colorway: 'Playoff',            year: 1993, styleCode: '305381-061', retail: 190, priceRange: [115, 135], grail: 2, image: 'Images/sneakers/Jordan8playofff.jpg',        description: 'Predominantly black with red and white accents — the Playoff 8 is clean and versatile. Jordan wore these during his third consecutive championship run.',                                                            funFact: 'Black is Jordan\'s stated favorite color. He\'s said the Playoff 8 was one of the few Jordan models he\'d wear off the court because they didn\'t look like "basketball shoes."' },
+      { id: 25, model:  9, colorway: 'Powder Blue',        year: 1993, styleCode: '302370-145', retail: 190, priceRange: [120, 140], grail: 2, image: 'Images/sneakers/Jordan9powderblue.jpg',      description: 'White leather with powder blue accents — one of the cleanest Jordan 9 colorways, released in 1993 during one of Jordan\'s most dominant NBA stretches.',                                                            funFact: 'The Jordan 9 is the only signature model Jordan never wore during an NBA championship — he retired during its primary retail window. That makes every Jordan 9 historically unique.' },
+      { id: 26, model:  9, colorway: 'Olive',              year: 1994, styleCode: '302370-030', retail: 190, priceRange: [110, 130], grail: 2, image: 'Images/sneakers/Jordan9Olive.jpg',           description: 'Black leather with olive green accents — militaristic and rugged. Released in 1994 during Jordan\'s first retirement. One of the most underrated colorways in the archive.',                                        funFact: 'Released while Jordan was playing baseball for the Birmingham Barons. The Olive militaristic colorway accidentally mirrored the tension and seriousness of his career pivot.' },
+      { id: 27, model:  9, colorway: 'Space Jam',          year: 1993, styleCode: '302370-045', retail: 190, priceRange: [130, 150], grail: 3, image: 'Images/sneakers/Jordan9Spacejam.jpg',        description: 'Black nubuck with white and blue accents inspired by the Space Jam era. Originally released in 1993, it has become a highly sought-after collector\'s item.',                                                       funFact: 'The blue and black combo was designed in 1993 — three years before the Space Jam film. Fans made the Looney Tunes connection so loudly that Nike embraced it retroactively.' },
+      { id: 28, model: 10, colorway: 'Steel Grey',         year: 1994, styleCode: '310805-003', retail: 190, priceRange: [100, 125], grail: 2, image: 'Images/sneakers/jordan10steelgrey.jpg.webp', description: 'White leather with steel grey accents — understated and versatile. Released in 1994, the Steel Grey 10 is one of the most wearable Jordan 10 colorways.',                                                          funFact: 'The Jordan 10 features a list of Jordan\'s career accomplishments printed on the outsole. Every time he walked, he literally stood on his own legacy.' },
+      { id: 29, model: 10, colorway: 'Powder Blue',        year: 1995, styleCode: '310805-902', retail: 190, priceRange: [100, 120], grail: 2, image: 'Images/sneakers/jordan10powderblue.jpg.webp', description: 'White leather with powder blue accents — clean and classic. Originally released in 1995 with a simple yet stylish color scheme.',                                                                                 funFact: 'Released during Jordan\'s baseball career. These are Jordan 10s he was never supposed to wear on an NBA court — a quiet monument to his brief, unexpected athletic detour.' },
+      { id: 30, model: 10, colorway: 'Chicago',            year: 1995, styleCode: '310805-100', retail: 190, priceRange: [130, 150], grail: 3, image: 'Images/sneakers/jordan10chicago.jpg.webp',   description: 'White, black, and red — the Chicago 10 honors Jordan\'s team and championship era. Released in 1995, a beloved and recognizable colorway.',                                                                         funFact: 'Released just before Jordan\'s famous "I\'m Back" fax in March 1995. The red and black Chicago 10 felt prophetic — as if Nike already knew he was returning.' },
+      { id: 31, model: 11, colorway: 'Bred',               year: 1996, styleCode: '378037-061', retail: 220, priceRange: [230, 255], grail: 5, image: 'Images/sneakers/Jordan11Bred.jpg.webp',      description: 'The Jordan 11 "Bred" is one of the most iconic colorways in sneaker history. Black with red patent leather mudguard — bold, striking, instantly recognizable since 1996.',                                          funFact: 'Tinker Hatfield designed the patent leather mudguard so Jordan would feel like he was wearing a tuxedo to work. He wanted Jordan\'s feet to look as polished as his game.' },
+      { id: 32, model: 11, colorway: 'Concord',            year: 1995, styleCode: '378037-100', retail: 220, priceRange: [215, 240], grail: 5, image: 'Images/sneakers/jordan11concord.jpg.webp',   description: 'White upper with black patent leather and Concord Purple accents — widely regarded as one of the greatest sneakers ever designed. Originally released in 1995.',                                                    funFact: 'The 2011 retro caused nationwide chaos — mall riots, police calls, lines starting three days before release. No other sneaker has caused more documented civil unrest at retail.' },
+      { id: 33, model: 11, colorway: 'Columbia',           year: 1996, styleCode: '378037-143', retail: 220, priceRange: [185, 210], grail: 4, image: 'Images/sneakers/Jordan11Columbia.jpg',       description: 'Also known as the "Legend Blue." Columbia University\'s colorway inspired the nickname. One of the most sought-after Jordan 11 colorways, originally released in 1996.',                                            funFact: 'Jordan wore these in the 1996 NBA Finals. The clean blue gives them a more wearable look than the Bred or Concord — which is why serious collectors often call them the sleeper pick.' },
+      { id: 34, model: 12, colorway: 'Cherry',             year: 1997, styleCode: '130690-110', retail: 185, priceRange: [145, 165], grail: 3, image: 'Images/sneakers/Jordan12Cherry.jpg',         description: 'White and red — the Cherry 12 is vibrant and clean. White leather upper with red accents on the mudguard, outsole, and branding. Originally released in 1997.',                                                     funFact: 'The Jordan 12 sole was inspired by the Japanese Rising Sun flag. Tinker Hatfield designed it to honor Jordan\'s massive popularity in Japan, which was unmatched by any American athlete.' },
+      { id: 35, model: 12, colorway: 'Flu Game',           year: 1997, styleCode: '130690-065', retail: 200, priceRange: [210, 230], grail: 5, image: 'Images/sneakers/jordan12flugame.jpg.webp',   description: 'Perhaps the most legendary game-worn Jordan ever — MJ scored 38 points in Game 5 of the 1997 NBA Finals while battling flu-like symptoms. Black and red. Iconic forever.',                                        funFact: 'Jordan\'s trainer Tim Grover has suggested the illness may have been deliberate food poisoning by a Utah hotel. Jordan played 44 minutes and hit the go-ahead basket in the final minute.' },
+      { id: 36, model: 12, colorway: 'Taxi',               year: 1996, styleCode: '130690-001', retail: 185, priceRange: [155, 175], grail: 3, image: 'Images/sneakers/jordan12taxi.jpg.webp',      description: 'White leather with black and taxi yellow accents — inspired by New York City cabs. Clean, timeless, and universally loved since its original 1996 release.',                                                        funFact: 'Jordan told Tinker Hatfield he wanted a colorway that captured New York\'s energy. Hatfield spent a day in Manhattan, hailed a cab, and the Taxi 12 was born on the ride back to his hotel.' },
+      { id: 37, model: 13, colorway: 'Bred',               year: 1998, styleCode: '414571-040', retail: 185, priceRange: [135, 155], grail: 3, image: 'Images/sneakers/jordan13bred.jpg.webp',      description: 'Black leather with red suede accents — the Bred 13 is known for its striking color blocking and sleek panther-inspired design. Originally released in 1998.',                                                       funFact: 'The panther paw print on the Jordan 13 outsole came from Tinker Hatfield studying big cat anatomy. Jordan\'s college nickname was "Black Cat" — the entire shoe was designed around that identity.' },
+      { id: 38, model: 13, colorway: 'He Got Game',        year: 1997, styleCode: '414571-101', retail: 185, priceRange: [125, 145], grail: 3, image: 'Images/sneakers/jordan13hegotgame.jpg.webp', description: 'Worn by Denzel Washington in the 1998 Spike Lee film. White with black and red accents, featuring the iconic holographic eye on the heel.',                                                                       funFact: 'Denzel Washington wears a size 13. Jordan is a size 13. Spike Lee chose the Jordan 13 specifically for that parallel — he called it "the universe aligning." The film released the same year Jordan wore them to his last championship.' },
+      { id: 39, model: 13, colorway: 'Playoff',            year: 1997, styleCode: '414571-001', retail: 185, priceRange: [125, 145], grail: 4, image: 'Images/sneakers/Jordan13playoff.jpg.webp',   description: 'Worn by Jordan during the 1997 NBA Playoffs en route to his fifth championship. Black leather with red accents and the panther paw outsole — a championship sneaker.',                                              funFact: 'Jordan won his sixth and final championship in the 1998 version of these. Three days later, he retired again. The last shoes of the last dynasty. The Last Dance.' },
+    ];
+
+    // ================================================================
+    // STATE
+    // ================================================================
+    let state = { filter: 'all', era: 'all', sort: 'default', query: '', favsOnly: false };
+    let favorites     = JSON.parse(localStorage.getItem('pgk_favs') || '[]');
+    let modalId       = null;
+
+    // ================================================================
+    // FILTER + SORT
+    // ================================================================
+    function getVisible() {
+      let list = [...SNEAKERS];
+      if (state.favsOnly)         list = list.filter(s => favorites.includes(s.id));
+      if (state.filter !== 'all') list = list.filter(s => s.model === +state.filter);
+      if (state.era === '80s')    list = list.filter(s => s.year < 1990);
+      if (state.era === '90s')    list = list.filter(s => s.year >= 1990);
+      if (state.query) {
+        const q = state.query.toLowerCase();
+        list = list.filter(s =>
+          `jordan ${s.model} ${s.colorway}`.toLowerCase().includes(q) ||
+          String(s.year).includes(q) ||
+          s.styleCode.toLowerCase().includes(q)
+        );
+      }
+      switch (state.sort) {
+        case 'year-asc':    list.sort((a, b) => a.year - b.year); break;
+        case 'year-desc':   list.sort((a, b) => b.year - a.year); break;
+        case 'name-asc':    list.sort((a, b) => `${a.model} ${a.colorway}`.localeCompare(`${b.model} ${b.colorway}`)); break;
+        case 'price-asc':   list.sort((a, b) => a.priceRange[0] - b.priceRange[0]); break;
+        case 'price-desc':  list.sort((a, b) => b.priceRange[0] - a.priceRange[0]); break;
+        case 'grail-desc':  list.sort((a, b) => b.grail - a.grail); break;
+      }
+      return list;
     }
-}
 
-function toggleContent(event) {
-    event.preventDefault();
-    const button = document.getElementById('toggleButton');
-    const buttonLess = document.getElementById('toggleButtonLess');
+    // ================================================================
+    // RENDER
+    // ================================================================
+    function renderGrid() {
+      const grid     = document.getElementById('sneakerGrid');
+      const empty    = document.getElementById('emptyState');
+      const countEl  = document.getElementById('resultsCount');
+      const clearBtn = document.getElementById('clearFilters');
+      const list     = getVisible();
+      const hasFilters = state.filter !== 'all' || state.query || state.favsOnly || state.sort !== 'default' || state.era !== 'all';
 
-    // If the button says "See More", show the extra content and hide the "See More" button
-    for (let i = 2; i <= 13; i++) {
-        const row = document.getElementById('row' + i);
-        row.style.visibility = 'visible';
-        row.style.height = 'auto';
+      countEl.textContent = list.length;
+      clearBtn.classList.toggle('hidden', !hasFilters);
+
+      if (list.length === 0) { grid.innerHTML = ''; empty.classList.remove('hidden'); return; }
+      empty.classList.add('hidden');
+
+      grid.innerHTML = list.map(s => {
+        const fav   = favorites.includes(s.id);
+        const badge = s.grail === 5 ? '<span class="grail-badge">GRAIL</span>'
+                    : s.grail === 4 ? '<span class="grail-badge heat">HEAT</span>' : '';
+        const flames = Array.from({length: 5}, (_, i) =>
+          `<i class="fa-${i < s.grail ? 'solid' : 'regular'} fa-fire ${i < s.grail ? 'lit' : ''}"></i>`
+        ).join('');
+
+        return `
+          <article class="sneaker-card reveal" data-id="${s.id}">
+            <div class="card-img-wrap" onclick="openLightbox('${s.image}', 'Jordan ${s.model} ${s.colorway.replace(/'/g,"\\'")}')">
+              <img src="${s.image}" alt="Jordan ${s.model} ${s.colorway}" loading="lazy">
+              <div class="card-badges">
+                <span class="badge-model">AJ${s.model}</span>
+                <span class="badge-year">${s.year}</span>
+              </div>
+              ${badge}
+              <button class="fav-btn ${fav ? 'active' : ''}" onclick="toggleFav(event,${s.id})" title="${fav ? 'Remove' : 'Save'}">
+                <i class="fa-${fav ? 'solid' : 'regular'} fa-heart"></i>
+              </button>
+              <div class="card-img-hint"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="card-body">
+              <p class="card-model">Jordan ${s.model}</p>
+              <h3 class="card-colorway">&ldquo;${s.colorway}&rdquo;</h3>
+              <p class="card-desc">${s.description}</p>
+              <div class="card-price-row">
+                <div class="card-price">
+                  <span class="price-label">Resell</span>
+                  <span class="price-value">$${s.priceRange[0]}–$${s.priceRange[1]}</span>
+                </div>
+                <div class="card-flames">${flames}</div>
+              </div>
+              <div class="card-footer-row">
+                <span class="card-style">${s.styleCode}</span>
+                <button class="price-btn" onclick="openModal(${s.id})">
+                  <i class="fa-solid fa-tag"></i> Details
+                </button>
+              </div>
+            </div>
+          </article>`;
+      }).join('');
+
+      revealCards();
     }
-    button.style.display = 'none'; // Hide the "See More" button
-    buttonLess.style.display = 'block'; // Show the "See Less" button
-}
 
-function toggleContentLess(event) {
-    event.preventDefault();
-    const button = document.getElementById('toggleButton');
-    const buttonLess = document.getElementById('toggleButtonLess');
+    // ================================================================
+    // PILLS
+    // ================================================================
+    function buildPills() {
+      const container = document.getElementById('filterPills');
+      const models    = [...new Set(SNEAKERS.map(s => s.model))].sort((a, b) => a - b);
+      models.forEach(m => {
+        const btn = document.createElement('button');
+        btn.className        = 'pill';
+        btn.dataset.filter   = String(m);
+        btn.textContent      = `Jordan ${m}`;
+        btn.onclick          = () => setFilter(String(m));
+        container.appendChild(btn);
+      });
 
-    // If the button says "See Less", hide the extra content and show the "See More" button
-    for (let i = 2; i <= 13; i++) {
-        const row = document.getElementById('row' + i);
-        row.style.visibility = 'hidden';
-        row.style.height = '0';
-    }
-    buttonLess.style.display = 'none'; // Hide the "See Less" button
-    button.style.display = 'block'; // Show the "See More" button
-}
-    
-</script>
-<script>
-    function setProductId(productId) {
-  localStorage.setItem('productId', productId);
-}
-</script>
-<script> // Get the input element
-    let searchInput = document.getElementById('searchInput');
-    
-    // Add event listener for input
-    searchInput.addEventListener('input', function() {
-        // Get the user input
-        let userInput = searchInput.value.toLowerCase();
-    
-        // Get all the shoes
-        let shoes = document.querySelectorAll('.work-list .work');
-    
-        // Loop through each shoe
-        shoes.forEach(function(shoe) {
-            // Get the shoe name
-            let shoeName = shoe.querySelector('h3').textContent.toLowerCase();
-    
-            // Check if the shoe name contains the user input
-            if (shoeName.includes(userInput)) {
-                // Show the shoe
-                shoe.style.display = 'block';
-            } else {
-                // Hide the shoe
-                shoe.style.display = 'none';
-            }
+      // Era pill handlers
+      document.querySelectorAll('[data-era]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const era = btn.dataset.era;
+          state.era = state.era === era ? 'all' : era;
+          document.querySelectorAll('[data-era]').forEach(b =>
+            b.classList.toggle('active', b.dataset.era === state.era)
+          );
+          renderGrid();
         });
+      });
+    }
+
+    function setFilter(val) {
+      state.filter = val;
+      document.querySelectorAll('[data-filter]').forEach(p =>
+        p.classList.toggle('active', p.dataset.filter === val)
+      );
+      renderGrid();
+    }
+
+    function resetAll() {
+      state = { filter: 'all', era: 'all', sort: 'default', query: '', favsOnly: false };
+      document.getElementById('searchInput').value = '';
+      document.getElementById('sortSelect').value  = 'default';
+      document.getElementById('favFilterBtn').classList.remove('active');
+      document.getElementById('favNavBtn').classList.remove('active');
+      document.getElementById('mbnFav').classList.remove('active');
+      document.querySelectorAll('.pill').forEach(p => p.classList.toggle('active', p.dataset.filter === 'all'));
+      document.querySelectorAll('[data-era]').forEach(b => b.classList.remove('active'));
+      renderGrid();
+    }
+
+    function toggleFavFilter() {
+      state.favsOnly = !state.favsOnly;
+      document.getElementById('favFilterBtn').classList.toggle('active', state.favsOnly);
+      document.getElementById('favNavBtn').classList.toggle('active', state.favsOnly);
+      document.getElementById('mbnFav').classList.toggle('active', state.favsOnly);
+      document.getElementById('browse').scrollIntoView({ behavior: 'smooth' });
+      renderGrid();
+    }
+
+    // ================================================================
+    // FAVORITES
+    // ================================================================
+    function toggleFav(event, id) {
+      event.stopPropagation();
+      const idx = favorites.indexOf(id);
+      if (idx === -1) { favorites.push(id); toast('Saved ❤️'); }
+      else            { favorites.splice(idx, 1); toast('Removed'); }
+      localStorage.setItem('pgk_favs', JSON.stringify(favorites));
+      updateFavBadge();
+      renderGrid();
+    }
+
+    function updateFavBadge() {
+      const badge = document.getElementById('favCount');
+      badge.textContent = favorites.length;
+      badge.classList.toggle('hidden', favorites.length === 0);
+    }
+
+    // ================================================================
+    // MODAL
+    // ================================================================
+    function openModal(id) {
+      const s = SNEAKERS.find(x => x.id === id);
+      if (!s) return;
+      modalId = id;
+
+      const query      = encodeURIComponent(`Jordan ${s.model} ${s.colorway}`);
+      const stockxUrl  = `https://stockx.com/search?s=${encodeURIComponent(s.styleCode)}`;
+      const goatUrl    = `https://www.goat.com/search?query=${query}`;
+      const fcUrl      = `https://www.flightclub.com/catalogsearch/result/?q=${encodeURIComponent(s.styleCode)}`;
+      const stadiumUrl = `https://www.stadiumgoods.com/en-us/search#q=${query}`;
+
+      const flames = Array.from({length: 5}, (_, i) =>
+        `<i class="fa-${i < s.grail ? 'solid' : 'regular'} fa-fire ${i < s.grail ? 'lit' : ''}"></i>`
+      ).join('');
+      const grailLabel = ['','Collector','Solid Pick','Must Have','Heat','GRAIL STATUS'][s.grail];
+
+      document.getElementById('modalContent').innerHTML = `
+        <div class="modal-header">
+          <img src="${s.image}" alt="Jordan ${s.model} ${s.colorway}" onclick="openLightbox('${s.image}','Jordan ${s.model} ${s.colorway.replace(/'/g,"\\'")}')">
+          <div class="modal-meta">
+            <p class="modal-model-label">Jordan ${s.model}</p>
+            <h2 class="modal-colorway-name">&ldquo;${s.colorway}&rdquo;</h2>
+            <p class="modal-style-code">${s.styleCode} &middot; ${s.year}</p>
+            <div class="modal-grail-row">
+              <div class="modal-flames">${flames}</div>
+              <span class="modal-grail-label">${grailLabel}</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-prices-section">
+          <div class="modal-price-cards">
+            <div class="modal-price-card">
+              <span class="mpc-label">Retail</span>
+              <span class="mpc-value mpc-retail">$${s.retail}</span>
+            </div>
+            <div class="modal-price-card highlight">
+              <span class="mpc-label">Resell Range</span>
+              <span class="mpc-value">$${s.priceRange[0]} – $${s.priceRange[1]}</span>
+              <span class="mpc-sub">avg. per StockX</span>
+            </div>
+            <div class="modal-price-card">
+              <span class="mpc-label">Premium</span>
+              <span class="mpc-value mpc-premium">+$${s.priceRange[0] - s.retail}</span>
+              <span class="mpc-sub">over retail</span>
+            </div>
+          </div>
+          <h3 class="market-heading">Shop Now</h3>
+          <div class="market-grid">
+            <a class="market-card" href="${stockxUrl}" target="_blank" rel="noopener">
+              <span class="market-name">StockX</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a class="market-card" href="${goatUrl}" target="_blank" rel="noopener">
+              <span class="market-name">GOAT</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a class="market-card" href="${fcUrl}" target="_blank" rel="noopener">
+              <span class="market-name">Flight Club</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a class="market-card" href="${stadiumUrl}" target="_blank" rel="noopener">
+              <span class="market-name">Stadium Goods</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+        <div class="modal-fact">
+          <span class="fact-label"><i class="fa-solid fa-bolt"></i> Did You Know</span>
+          <p>${s.funFact}</p>
+        </div>
+        <div class="modal-share-row">
+          <button class="share-btn" onclick="shareShoe(${s.id})">
+            <i class="fa-solid fa-share-nodes"></i> Share
+          </button>
+          <button class="share-btn" onclick="toggleFav(event,${s.id})">
+            <i class="fa-${favorites.includes(s.id) ? 'solid' : 'regular'} fa-heart"></i>
+            ${favorites.includes(s.id) ? 'Saved' : 'Save'}
+          </button>
+        </div>`;
+
+      // Nav arrows
+      const visible = getVisible();
+      const idx     = visible.findIndex(x => x.id === id);
+      const prev    = visible[(idx - 1 + visible.length) % visible.length];
+      const next    = visible[(idx + 1) % visible.length];
+      document.getElementById('modalNavRow').innerHTML = `
+        <button class="modal-nav-btn" onclick="openModal(${prev.id})">
+          <i class="fa-solid fa-chevron-left"></i> ${prev.colorway}
+        </button>
+        <span class="modal-nav-count">${idx + 1} / ${visible.length}</span>
+        <button class="modal-nav-btn" onclick="openModal(${next.id})">
+          ${next.colorway} <i class="fa-solid fa-chevron-right"></i>
+        </button>`;
+
+      document.getElementById('priceModal').classList.remove('hidden');
+      document.getElementById('modalBackdrop').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('priceModal').classList.add('hidden');
+      document.getElementById('modalBackdrop').classList.add('hidden');
+      document.body.style.overflow = '';
+      modalId = null;
+    }
+
+    function shareShoe(id) {
+      const s = SNEAKERS.find(x => x.id === id);
+      const text = `Jordan ${s.model} "${s.colorway}" (${s.year}) — check it out on PeterGotKicks`;
+      if (navigator.share) {
+        navigator.share({ title: 'PeterGotKicks', text, url: window.location.href }).catch(() => {});
+      } else {
+        navigator.clipboard.writeText(text).then(() => toast('Copied to clipboard!'));
+      }
+    }
+
+    // ================================================================
+    // LIGHTBOX
+    // ================================================================
+    function openLightbox(src, alt) {
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightboxImg').alt = alt;
+      document.getElementById('lightbox').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.add('hidden');
+      if (!modalId) document.body.style.overflow = '';
+    }
+
+    // ================================================================
+    // RANDOM KICK
+    // ================================================================
+    function randomKick() {
+      const visible = getVisible();
+      if (!visible.length) return;
+      const s   = visible[Math.floor(Math.random() * visible.length)];
+      const el  = document.querySelector(`[data-id="${s.id}"]`);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        el.classList.add('highlight-pulse');
+        setTimeout(() => el.classList.remove('highlight-pulse'), 1400);
+      } else {
+        resetAll();
+        setTimeout(() => randomKick(), 100);
+      }
+    }
+
+    // ================================================================
+    // HERO SLIDESHOW
+    // ================================================================
+    let heroIdx = 0, heroTimer;
+    function goToSlide(n) {
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots   = document.querySelectorAll('.hdot');
+      slides[heroIdx].classList.remove('active');
+      dots[heroIdx].classList.remove('active');
+      heroIdx = n;
+      slides[heroIdx].classList.add('active');
+      dots[heroIdx].classList.add('active');
+      clearInterval(heroTimer);
+      heroTimer = setInterval(() => goToSlide((heroIdx + 1) % slides.length), 5500);
+    }
+
+    // ================================================================
+    // FEATURED / DAILY SHOE
+    // ================================================================
+    function renderFeatured() {
+      const grails  = SNEAKERS.filter(s => s.grail === 5);
+      const day     = Math.floor(Date.now() / 86400000);
+      const s       = grails[day % grails.length];
+      const strip   = document.getElementById('featuredStrip');
+      strip.innerHTML = `
+        <div class="featured-inner" onclick="openModal(${s.id})">
+          <span class="featured-tag"><i class="fa-solid fa-fire"></i> Today's Pick</span>
+          <img src="${s.image}" alt="Jordan ${s.model} ${s.colorway}">
+          <div class="featured-text">
+            <p class="featured-model">Jordan ${s.model}</p>
+            <h3 class="featured-colorway">&ldquo;${s.colorway}&rdquo;</h3>
+            <p class="featured-price">$${s.priceRange[0]}–$${s.priceRange[1]}</p>
+          </div>
+          <i class="fa-solid fa-chevron-right featured-arrow"></i>
+        </div>`;
+    }
+
+    // ================================================================
+    // STATS COUNTER
+    // ================================================================
+    function initStats() {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          e.target.querySelectorAll('[data-target]').forEach(el => countUp(el));
+          obs.unobserve(e.target);
+        });
+      }, { threshold: 0.5 });
+      obs.observe(document.getElementById('stats'));
+    }
+    function countUp(el) {
+      const target = +el.dataset.target, dur = 1800, start = performance.now();
+      const tick = now => {
+        const t = Math.min((now - start) / dur, 1);
+        el.textContent = Math.round((1 - Math.pow(1 - t, 3)) * target).toLocaleString();
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }
+
+    // ================================================================
+    // SCROLL REVEAL
+    // ================================================================
+    function revealCards() {
+      const obs = new IntersectionObserver((entries, o) => {
+        entries.forEach((e, i) => {
+          if (!e.isIntersecting) return;
+          setTimeout(() => e.target.classList.add('revealed'), (i % 3) * 55);
+          o.unobserve(e.target);
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.reveal:not(.revealed)').forEach(el => obs.observe(el));
+    }
+
+    // ================================================================
+    // SCROLL PROGRESS + SCROLL TO TOP
+    // ================================================================
+    function initScroll() {
+      const bar = document.getElementById('scrollProgress');
+      const btn = document.getElementById('scrollTopBtn');
+      window.addEventListener('scroll', () => {
+        const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+        bar.style.width = pct + '%';
+        btn.classList.toggle('hidden', window.scrollY < 400);
+        document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 56);
+      }, { passive: true });
+    }
+
+    // ================================================================
+    // ABOUT TABS
+    // ================================================================
+    function initAboutTabs() {
+      document.querySelectorAll('.atab').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.atab').forEach(b => b.classList.remove('active'));
+          document.querySelectorAll('.about-panel').forEach(p => p.classList.remove('active'));
+          btn.classList.add('active');
+          document.getElementById(`tab-${btn.dataset.tab}`).classList.add('active');
+        });
+      });
+    }
+
+    // ================================================================
+    // TOAST
+    // ================================================================
+    function toast(msg) {
+      const c  = document.getElementById('toastContainer');
+      const el = document.createElement('div');
+      el.className = 'toast';
+      el.textContent = msg;
+      c.appendChild(el);
+      requestAnimationFrame(() => el.classList.add('show'));
+      setTimeout(() => { el.classList.remove('show'); setTimeout(() => el.remove(), 350); }, 2400);
+    }
+
+    // ================================================================
+    // INIT
+    // ================================================================
+    document.addEventListener('DOMContentLoaded', () => {
+      buildPills();
+      renderFeatured();
+      renderGrid();
+      initStats();
+      initAboutTabs();
+      initScroll();
+      updateFavBadge();
+
+      heroTimer = setInterval(() => goToSlide((heroIdx + 1) % 3), 5500);
+
+      document.getElementById('searchInput').addEventListener('input', e => {
+        state.query = e.target.value.trim();
+        renderGrid();
+      });
+      document.getElementById('sortSelect').addEventListener('change', e => {
+        state.sort = e.target.value;
+        renderGrid();
+      });
+      document.getElementById('favFilterBtn').addEventListener('click', toggleFavFilter);
+      document.getElementById('favNavBtn').addEventListener('click', toggleFavFilter);
+      document.getElementById('clearFilters').addEventListener('click', resetAll);
+
+      document.addEventListener('keydown', e => {
+        const search  = document.getElementById('searchInput');
+        const modal   = document.getElementById('priceModal');
+        const isModal = !modal.classList.contains('hidden');
+        if (e.key === '/' && document.activeElement !== search) { e.preventDefault(); search.focus(); search.select(); }
+        if (e.key === 'Escape') { search.blur(); closeModal(); closeLightbox(); }
+        if (isModal && modalId) {
+          const visible = getVisible();
+          const idx     = visible.findIndex(x => x.id === modalId);
+          if (e.key === 'ArrowRight') openModal(visible[(idx + 1) % visible.length].id);
+          if (e.key === 'ArrowLeft')  openModal(visible[(idx - 1 + visible.length) % visible.length].id);
+        }
+      });
     });
-    </script>
-       <script src="eventlistener.js"></script>
+  </script>
 </body>
 </html>
